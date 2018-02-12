@@ -1,0 +1,85 @@
+.box {
+  width: 500px;
+  background-color: #fff;
+  border-radius: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -250px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  
+}
+body {
+  -webkit-transition: background-color ease 1s;
+  transition: background-color ease 1s;
+}
+.quote-box p {
+  padding: 30px 30px 10px 30px;
+  font-size: 24px;
+  -webkit-transition: color ease 2s;
+  transition: color ease 2s;
+  text-align: center;
+  color: transparent;
+}
+.quote-box p:before {
+  content: "\201c";
+  font-size: 250%;
+  font-weight: bold;
+  vertical-align: -webkit-baseline-middle;
+  line-height: 24px;
+}
+.quote-box span {
+  font-size: 18px;
+  float: right;
+  margin-right: 30px;
+  -webkit-transition: color ease 2s;
+  transition: color ease 2s;
+  color: transparent;
+}
+.buttons {
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px 30px 30px 30px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.get-quote, .tweet {
+  border: none;
+  -webkit-transition: background-color ease 1s;
+  transition: background-color ease 1s;
+  -webkit-transition: opacity ease 0.4s;
+  transition: opacity ease 0.4s;
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 3px;
+}
+.get-quote:hover, .tweet:hover {
+  opacity: 0.8;
+}
+.get-quote:focus, .tweet:focus {
+  outline:0;
+}
+.fa-twitter{
+  font-size: 1.2em;
+  display: block;
+}
+ 
+.fa-twitter:before {
+    content: "\f099";
+    color: #fff;
+    font-size: 1.2em;
+}
+.tweet {
+  padding: 10px 15px;
+}
+.tweet a {
+  text-decoration:none;
+}
+.tweet a:hover {
+  text-decoration:none;
+}
