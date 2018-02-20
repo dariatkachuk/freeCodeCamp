@@ -1,0 +1,121 @@
+@charset "UTF-8";
+body {
+  background-color: #ccc;
+}
+body .tabs {
+  max-width: 30%;
+  float: none;
+  list-style: none;
+  padding: 0;
+  margin: 75px auto;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+body .tabs:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+body .tabs [id^="tab"]:checked + label {
+  background-color: #fff;
+  color: #63469F;
+  box-shadow: inset 0 2px #63469F;
+}
+body .tabs input[type=radio] {
+  display: none;
+}
+body .tabs label {
+  display: block;
+  float: left;
+  width: 33.33%;
+  color: #fff;
+  font-size: 30px;
+  font-weight: normal;
+  text-decoration: none;
+  text-align: center;
+  line-height: 2;
+  cursor: pointer;
+  background-color: #63469F;
+  margin-bottom: 0;
+  -webkit-transition: all ease 0.5s;
+  transition: all 0.5s;
+}
+body .tabs label:hover {
+  background-color: #a190c5;
+  box-shadow: inset 0 1px #fff;
+}
+body .tabs label p {
+  margin-right: 0;
+  margin-bottom: 0;
+  font-size: 14px;
+  margin: 7px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+body .tabs label span {
+  display: none;
+}
+body .tabs .tab-content {
+  display: none;
+  width: 100%;
+  min-height: 300px;
+  float: left;
+  padding: 15px;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+body .tabs .tab-content ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 10px;
+}
+body .tabs .tab-content ul li {
+  clear: both;
+  display: block;
+  padding: 10px 0 10px 10px;
+  border-bottom: 1px solid #E1DAEF;
+  transition: all ease 0.5s;
+}
+body .tabs .tab-content ul li:last-child {
+  border-bottom: none;
+}
+body .tabs .tab-content ul li:hover {
+  background-color: #E1DAEF;
+}
+body .tabs .tab-content ul li a {
+  height: 70px;
+  display: block;
+}
+body .tabs .tab-content ul li a:hover {
+  text-decoration: none;
+}
+body .tabs .tab-content ul li a img {
+  float: left;
+  width: 30%;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+body .tabs .tab-content ul li a div {
+  float: left;
+  width: 70%;
+  margin-left: 15px;
+}
+body .tabs .tab-content ul li a div h3 {
+  font-size: 20px;
+  margin-top: 5px;
+  color: #63469F;
+}
+body .tabs .tab-content ul li a div p {
+  color: rgba(99, 70, 159, 0.7);
+  margin: 0;
+}
+body .tabs .tab-content ul .channelActive div h3:after {
+  content: "⬤";
+  color: #469f63;
+  margin-left: 10px;
+}
+
+#tab-first:checked ~ #tab-content-1, #tab-second:checked ~ #tab-content-2, #tab-third:checked ~ #tab-content-3 {
+  display: block;
+}
