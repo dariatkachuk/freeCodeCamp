@@ -10,7 +10,7 @@ $(document).ready(function() {
     } else {
       searchWiki();
     }
-  })
+  });
   // Press Close Button
   $('.fa-close').on('click', function() {
     $('.fa-search').fadeIn('fast').css('left', '50%').css({"-webkit-transform": "translate(-50%, -50%)"});
@@ -21,15 +21,15 @@ $(document).ready(function() {
     $(".info").fadeOut('slow');
     $(".articles").fadeOut('slow');
     $(".content").css('height', '100vh');
-  })
+  });
    // Form Submit  
   $("form").on("submit", function() {
     event.preventDefault ();
     event.stopImmediatePropagation ();
     searchWiki();
-  })
+  });
 
-})
+});
 
 // Search function
   function searchWiki(){
@@ -59,6 +59,6 @@ $(document).ready(function() {
         $(".articles").html(html).fadeIn('fast');
         $(".content").css('height', 'initial');
         $("form p").fadeOut('fast');
-      })
+      });
     }
   }
