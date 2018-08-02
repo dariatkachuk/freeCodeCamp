@@ -1,0 +1,112 @@
+$background : #ccc
+$background-tab : #fff
+$primary-color: #63469F
+$secondary-color: #E1DAEF
+$on-air: #469f63 
+$hover: #a190c5
+
+
+body
+	background-color: $background
+	
+	.tabs
+		max-width: 30%
+		float: none
+		list-style: none
+		padding: 0
+		margin: 75px auto
+		border: 1px solid #ccc
+		border-top: none
+		&:after
+			content: ''
+			display: table
+			clear: both
+		[id^="tab"]:checked + label
+			background-color: $background-tab
+			color: $primary-color
+			box-shadow: inset 0 2px $primary-color
+		input[type=radio]
+			display: none
+		label
+			display: block
+			float: left
+			width: 33.33%
+			color: $background-tab
+			font-size: 30px
+			font-weight: normal
+			text-decoration: none
+			text-align: center
+			line-height: 2
+			cursor: pointer
+			background-color: $primary-color
+			margin-bottom: 0
+			-webkit-transition: all ease 0.5s
+			transition: all 0.5s
+			&:hover
+				background-color: $hover
+				box-shadow: inset 0 1px $background-tab
+			p
+				margin-right: 0
+				margin-bottom: 0
+				font-size: 14px
+				margin: 7px 0
+				text-transform: uppercase
+				letter-spacing: 0.8px
+			span
+				display: none
+				
+		.tab-content
+			display: none
+			width: 100%
+			min-height: 300px
+			float: left
+			padding: 15px
+			box-sizing: border-box
+			background-color: $background-tab
+			ul
+				list-style: none
+				padding-left: 0
+				margin-top: 10px
+				li
+					clear: both
+					display: block
+					padding: 10px 0 10px 10px
+					border-bottom: 1px solid $secondary-color
+					transition: all ease 0.5s
+					&:last-child
+						border-bottom: none
+					&:hover
+						background-color: $secondary-color
+					a
+						height: 70px
+						display: block
+						&:hover
+							text-decoration: none
+						img
+							float: left
+							width: 30%
+							width: 70px
+							height: 70px
+							border-radius: 50%
+						div
+							float: left
+							width: 70%
+							margin-left: 15px
+							h3
+								font-size: 20px
+								margin-top: 5px
+								color: $primary-color
+							p
+								color: rgba(99, 70, 159, 0.7)
+								margin: 0
+				.channelActive
+					div
+						h3
+							&:after
+								content: '\2b24'
+								color: $on-air
+								margin-left: 10px
+
+#tab-first:checked ~ #tab-content-1, #tab-second:checked ~ #tab-content-2, #tab-third:checked ~ #tab-content-3
+	display: block
+	
